@@ -147,9 +147,6 @@ notify(Name, Event) ->
 notify(Name, Event, Type) ->
     folsom_ets:notify(Name, Event, Type).
 
-notify(Name, Event, {histogram, SampleType}) ->
-    folsom_ets:notify(Name, Event, {histogram, HistogramType}).
-
 notify(Name, Event, Type, Tags) ->
     folsom_ets:tagged_notify(Name, Event, Type, Tags).
 
